@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node_t {
+typedef struct node_t {     // función para describir una estructura
     int val;
     struct node_t * next;
 } node_t;
 
-void print_list(node_t * head) {
+void print_list(node_t * head) {    // función para crear una lista
     node_t * current = head;
     while (current != NULL) {
         printf("%d\n", current->val);
@@ -14,7 +14,7 @@ void print_list(node_t * head) {
     }
 }
 
-int pop(node_t ** head) {
+int pop(node_t ** head) {       // función para remover (poping) una fila (mas abajo escogemos cual vamos a eliminar)
     int retval = -1;
     node_t * next_node = NULL;
 
